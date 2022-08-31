@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:travel/constants.dart';
 import 'package:travel/size_config.dart';
+
+import 'search_field.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -45,31 +46,7 @@ class Body extends StatelessWidget {
             ),
             Positioned(
               bottom: getProportionateScreenHeight(-25),
-              child: Container(
-                width: getProportionateScreenWidth(313),
-                height: getProportionateScreenHeight(50),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(5),
-                  border: Border.all(
-                    color: Colors.black26,
-                  ),
-                  boxShadow: [kDefaultShadow],
-                ),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: kIconColor,
-                    ),
-                    hintText: 'Search',
-                    hintStyle: TextStyle(
-                      color: kTextColor,
-                    ),
-                  ),
-                ),
-              ),
+              child: SearchField(),
             )
           ],
         ),
