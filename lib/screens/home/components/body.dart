@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:travel/screens/home/components/section_title.dart';
+import 'package:travel/screens/home/components/popular_place.dart';
 import 'package:travel/size_config.dart';
 
 import 'home_header.dart';
@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
         children: [
           HomeHeader(),
           Gap(getProportionateScreenHeight(40)),
-          SectionTitle(),
+          PopularPlace(),
         ],
       ),
     );
