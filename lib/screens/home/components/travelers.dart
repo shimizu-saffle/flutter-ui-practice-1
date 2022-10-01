@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 import '../../../models/TravelSpot.dart';
+import '../../../models/User.dart';
 import '../../../size_config.dart';
 
 class Travelers extends StatelessWidget {
   const Travelers({
     Key? key,
+    required this.users,
   }) : super(key: key);
+
+  final List<User> users;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +22,7 @@ class Travelers extends StatelessWidget {
       child: Stack(
         children: [
           ...List.generate(
-            travelSpots[0].users.length,
+            users.length,
             (index) {
               totalUser++;
               return Positioned(
